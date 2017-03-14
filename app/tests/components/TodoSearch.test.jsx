@@ -4,7 +4,6 @@ var TestUtils = require('react-addons-test-utils');
 var expect = require('expect');
 var $ = require('jquery');
 
-
 var TodoSearch = require('TodoSearch');
 
 describe('TodoSearch', () => {
@@ -12,25 +11,24 @@ describe('TodoSearch', () => {
     expect(TodoSearch).toExist();
   });
 
-  it('should call onSearch with enterd input text', () => {
+  it('should call onSearch with entered input text', () => {
     var searchText = 'Dog';
     var spy = expect.createSpy();
     var todoSearch = TestUtils.renderIntoDocument(<TodoSearch onSearch={spy}/>);
 
-    TodoSearch.refs.searchText.value = searchText;
+    todoSearch.refs.searchText.value = searchText;
     TestUtils.Simulate.change(todoSearch.refs.searchText);
 
-    expect(spy).toHaveBeenCalledWith(false, "Dog");
+    expect(spy).toHaveBeenCalledWith(false, 'Dog');
   });
 
   it('should call onSearch with proper checked value', () => {
     var spy = expect.createSpy();
     var todoSearch = TestUtils.renderIntoDocument(<TodoSearch onSearch={spy}/>);
 
-    TodoSearch.refs.showCompleted.checked = true;
+    todoSearch.refs.showCompleted.checked = true;
     TestUtils.Simulate.change(todoSearch.refs.showCompleted);
 
-    expect(spy).toHaveBeenCalledWith(true, "");
-
+    expect(spy).toHaveBeenCalledWith(true, '');
   });
 });
