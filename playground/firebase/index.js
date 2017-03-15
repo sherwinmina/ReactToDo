@@ -10,5 +10,10 @@ var config = {
   firebase.initializeApp(config);
 
 firebase.database().ref().set({
-  appName: 'TodoApp'
+  appName: 'TodoApp',
+  isRunning: true,
+  user: {
+    name: 'Sherwin',
+    age: 28
+  }
 });
