@@ -22,10 +22,10 @@ module.exports = {
         warnings: false
       }
     })
-    // new webpack.DefinePlugin({
-    // 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
-    // }),
-    // new webpack.EnvironmentPlugin(['NODE_ENV'])
+    new webpack.DefinePlugin({
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+    }),
+    new webpack.EnvironmentPlugin(['NODE_ENV'])
   ],
   output: {
     path: __dirname,
