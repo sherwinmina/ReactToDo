@@ -1,12 +1,15 @@
 var React = require('react');
+import * as Redux from 'react-redux';
 var uuid = require('node-uuid');
 var moment = require('moment');
-var TodoSearch = require('TodoSearch');
 
-// TodoSearch
-// import TodoList from 'TodoList'
+
+
+import TodoList from 'TodoList'
 import AddTodo from 'AddTodo';
 import TodoSearch from 'TodoSearch';
+import * as actions from 'actions';
+
 
 var TodoApp = React.createClass({
   render: function () {
