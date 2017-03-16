@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 
-// process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
   entry: [
@@ -39,7 +39,7 @@ module.exports = {
       './app/api'
     ],
     alias: {
-      app: 'app',
+      // app: 'app',
       applicationStyles: 'app/styles/app.scss',
       actions: 'app/actions/actions.jsx',
       reducers: 'app/reducers/reducers.jsx',
