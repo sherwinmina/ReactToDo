@@ -12,7 +12,7 @@ export var TodoApp = React.createClass({
     var {dispatch} = this.props;
     e.preventDefault();
 
-    dispatch(actions.onLogout());
+    dispatch(actions.startLogout());
   },
 
   render() {
