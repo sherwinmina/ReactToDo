@@ -100,7 +100,7 @@ describe('Reducers', () => {
       expect(res).toEqual({
         uid: action.uid
       });
-
+    });
 
       it('should wipe on LOGOUT', () => {
         const authData = {
@@ -113,7 +113,7 @@ describe('Reducers', () => {
 
         expect(res).toEqual({});
       });  
-    });
   });
-
 });
+
+
