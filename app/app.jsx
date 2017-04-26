@@ -8,6 +8,15 @@ var store = require('configureStore').configure();
 var TodoAPI = require('TodoAPI');
 import Login from 'Login';
 import TodoApp from 'TodoApp';
+import firebase from 'firebase';
+
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    hashHistory.push('/todos');
+  } else {
+    hashHistory.push('/');
+  }
+ });
 
 store.dispatch(actions.startAddTodos());
 
